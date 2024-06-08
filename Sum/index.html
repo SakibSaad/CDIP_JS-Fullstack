@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <span> + </span>
+    <input type="number" id="number2" placeholder="Enter second number">
+    <button onclick="
+        var num1 = parseFloat(document.getElementById('number1').value);
+        var num2 = parseFloat(document.getElementById('number2').value);
+        if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById('result').innerText = 'Please enter valid numbers.';
+        } else {
+            var sum = num1 + num2;
+            document.getElementById('result').innerText = 'Result: ' + sum;
+        }
+    ">Calculate</button>
+    <div id="result"></div>
+</body>
+</html>

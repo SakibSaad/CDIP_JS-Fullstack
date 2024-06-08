@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph and Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p id="myParagraph">This is a paragraph. Hover over the button to clear this text.</p>
+    <button 
+        id="myButton" 
+        onmouseover="document.getElementById('myParagraph').textContent=''" 
+        onmouseout="document.getElementById('myParagraph').textContent='This is a paragraph. Hover over the button to clear this text.'">
+        Hover over me
+    </button>
+</body>
+</html>
